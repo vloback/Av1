@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Alunos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Nome</th>
+      <th>Curso</th>
+      <th>Email_Pessoal</th>
+      <th>Email_Lasalle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appalunos.each do |appaluno| %>
+      <tr>
+        <td><%= appaluno.matricula %></td>
+        <td><%= appaluno.nome %></td>
+        <td><%= appaluno.curso %></td>
+        <td><%= appaluno.emailpessoal %></td>
+        <td><%= appaluno.emaillasalle %></td>
+        <td><%= link_to 'Mostrar', appaluno %></td>
+        <td><%= link_to 'Editar', edit_appaluno_path(appaluno) %></td>
+        <td><%= link_to 'Apagar', appaluno, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Aluno', new_appaluno_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@appaluno) do |f| %>
+  <% if @appaluno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appaluno.errors.count, "error") %> prohibited this appaluno from being saved:</h2>
+
+      <ul>
+      <% @appaluno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :matricula %><br>
+    <%= f.text_field :matricula %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :curso %><br>
+    <%= f.text_field :curso %>
+  </div>
+  <div class="field">
+    <%= f.label :emailpessoal %><br>
+    <%= f.text_field :emailpessoal %>
+  </div>
+  <div class="field">
+    <%= f.label :emaillasalle %><br>
+    <%= f.text_field :emaillasalle %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

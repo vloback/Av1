@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @appaluno.matricula %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @appaluno.nome %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @appaluno.curso %>
+</p>
+
+<p>
+  <strong>Email_Pessoal:</strong>
+  <%= @appaluno.emailpessoal %>
+</p>
+
+<p>
+  <strong>Email_Lasalle:</strong>
+  <%= @appaluno.emaillasalle %>
+</p>
+
+<%= link_to 'Alterar', edit_appaluno_path(@appaluno) %> |
+<%= link_to 'Voltar', appalunos_path %>
